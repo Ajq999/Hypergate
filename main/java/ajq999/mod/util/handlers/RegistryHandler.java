@@ -1,7 +1,9 @@
 package ajq999.mod.util.handlers;
 
+import ajq999.mod.init.BlockInit;
 import ajq999.mod.init.ItemInit;
 import ajq999.mod.util.IHasModel;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -17,6 +19,12 @@ public class RegistryHandler
 	}
 	
 	@SubscribeEvent
+	public static void onBlockRegister(RegistryEvent.Register<Block> event)
+	{
+		event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
+	}
+	
+	@SubscribeEvent
 	public static void onModelRegister(RegistryEvent.Register<Item> event)
 	{
 		for(Item item : ItemInit.ITEMS)
@@ -24,6 +32,14 @@ public class RegistryHandler
 			if (item instanceof IHasModel) 
 			{
 				((IHasModel)item).registerModels();
+			}
+		}
+		
+		for(Block block : BlockInit.BLOCKS)
+		{
+			if (block instanceof IHasModel) 
+			{
+				((IHasModel)block).registerModels();
 			}
 		}
 	}

@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "hts:block_copper" }
+    }
+}
