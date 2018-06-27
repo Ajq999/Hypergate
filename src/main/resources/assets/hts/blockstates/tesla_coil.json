@@ -1,7 +1,7 @@
 {
     "variants":
     {
-        "variant=0":
+        "normal":
         {
             "model": "hts:tesla_coil"
         }

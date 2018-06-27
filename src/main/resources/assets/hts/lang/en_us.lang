@@ -3,3 +3,8 @@ itemGroup.hypergatetab=Hypergate Tunneling Systems
 item.card_circuit_advanced.name=Advanced Circuit Card
 item.card_circuit_basic.name=Basic Circuit Card
 item.ingot_copper.name=Copper Ingot
+
+tile.tesla_coil.name=Tesla Coil
+tile.high_temp_furnace.name=High Temperature Furnace
+
+container.high_temp_furnace=High Temperature Furnace
